@@ -1,0 +1,368 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+html, body
+{
+    margin: 0px;
+}
+
+header, footer
+{
+    font-family: Raleway;
+    margin: 0 auto;
+	padding: 5em 3em;
+	text-align: center;
+    background:#b3b2b2;
+}
+
+header h1
+{
+    color:#757575;
+    font-size: 30px;
+    font-weight: lighter;
+    margin-bottom: 8px;
+}
+
+header p
+{
+    color:#888888;
+}
+
+footer p
+{
+  color:#888888;
+}
+
+div.container
+{
+    font-family: Raleway;
+    margin: 0 auto;
+	padding: 100px;
+	text-align: center;
+}
+
+div.container a
+{
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.red
+{
+    background: #f44336;
+}
+
+.purple
+{
+    background: #673ab7;
+}
+
+.blue
+{
+    background: #2196f3;
+}
+
+.green
+{
+    background: #4caf50;
+}
+
+.lightGreen
+{
+    background: #8bc34a;
+}
+
+.lime
+{
+    background: #c0ca33;
+}
+
+.yellow
+{
+    background: #fdd835;
+}
+
+.amber
+{
+    background: #ffc107;
+}
+
+.orange
+{
+    background: #ff9800
+}
+
+.deepOrange
+{
+    background: #ff5722;
+}
+
+.gray
+{
+    background: #9e9e9e;
+}
+
+/* Top and Bottom borders go out */
+div.topBotomBordersOut a:before, div.topBotomBordersOut a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.topBotomBordersOut a:before
+{
+    top: 0px;
+    transform: translateY(10px);
+}
+
+div.topBotomBordersOut a:after
+{
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+
+div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* Top and Bottom borders come in */
+div.topBotomBordersIn a:before, div.topBotomBordersIn a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.topBotomBordersIn a:before
+{
+    top: 0px;
+    transform: translateY(-10px);
+}
+
+div.topBotomBordersIn a:after
+{
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* Circle behind */
+div.circleBehind a:before, div.circleBehind a:after
+{
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border: 4px solid #0277bd;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    border-radius: 50%;
+    background: transparent;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+div.circleBehind a:after
+{
+    border-width: 2px;
+    transition: all 0.4s;
+}
+
+div.circleBehind a:hover:before
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+div.circleBehind a:hover:after
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+}
+
+/* Border X get width  */
+div.borderXwidth a:before, div.borderXwidth a:after
+{
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: #FFF;
+    transition: all 0.3s;
+}
+
+div.borderXwidth a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+div.borderXwidth a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
+{
+    opacity: 1;
+    width: 100%;
+}
+
+/* Pull down  */
+div.pullDown a:before
+{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    top: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+div.pullDown a:hover:before
+{
+    height: 100%;
+}
+
+/* Pull up  */
+div.pullUp a:before
+{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    bottom: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+div.pullUp a:hover:before
+{
+    height: 100%;
+}
+
+/* Pull right  */
+div.pullRight a:before
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+div.pullRight a:hover:before
+{
+    width: 100%;
+}
+
+/* Pull left  */
+div.pullLeft a:before
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    right: 0px;
+    top: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+div.pullLeft a:hover:before
+{
+    width: 100%;
+}
+
+/* Pull up and down  */
+div.pullUpDown a:before, div.pullUpDown a:after
+{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+div.pullUpDown a:before
+{
+    top: 0px;
+} 
+
+div.pullUpDown a:after
+{
+    bottom: 0px;
+}
+
+div.pullUpDown a:hover:before, div.pullUpDown a:hover:after
+{
+    height: 100%;
+}
+
+/* Pull right and left  */
+div.pullRightLeft a:before, div.pullRightLeft a:after
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+div.pullRightLeft a:before
+{
+    left: 0px;
+} 
+
+div.pullRightLeft a:after
+{
+    right: 0px;
+}
+
+div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
+{
+    width: 100%;
+}
